@@ -51,10 +51,10 @@ class Solution(object):
             result += e.importance
             subordinates = e.subordinates
             for sid in subordinates:
-                s = employeeMap[sid]
-                queue.append(s.id)
+                queue.append(sid)
 
         return result
+
 
 # DFS
 class Solution(object):
@@ -78,8 +78,8 @@ class Solution(object):
         self.result += employeeMap[id].importance
         subordinates = employeeMap[id].subordinates
         for sid in subordinates:
-            s = employeeMap[sid]
-            self.helper(employeeMap, s.id)
+            self.helper(employeeMap, sid)
+
 
 
 
